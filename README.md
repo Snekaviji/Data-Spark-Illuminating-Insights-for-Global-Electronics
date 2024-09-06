@@ -1,24 +1,24 @@
 # Data-Spark-Illuminating-Insights-for-Global-Electronics
 
 ## DOMAIN
-*Retail Analytics in the Electronics Industry
+* Retail Analytics in the Electronics Industry
 
 ## SKILL-TAKEAWAY
-*Data Cleaning and Preprocessing
-*EDA
-*Python
-*Data Management using SQL
-*Power Bi
+* Data Cleaning and Preprocessing
+* EDA
+* Python
+* Data Management using SQL
+* Power Bi
 
 ## TECHNOLOGY USED
-*Python 3.12.4
-*MySQL 8.0.39
-*Power Bi
-*Matplotlib
-*Seaborn
+* Python 3.12.4
+* MySQL 8.0.39
+* Power Bi
+* Matplotlib
+* Seaborn
 
 ## BUSINESS USE CASES
-*By analyzing Global Electronics' customer, product, sales, and store data, we aim to identify key insights 
+* By analyzing Global Electronics' customer, product, sales, and store data, we aim to identify key insights 
 that will enhance marketing strategies, optimize inventory management, and improve sales forecasting. 
 This will help tailor marketing campaigns, develop better products, plan effective promotions, 
 and decide on store expansions and optimizations. Additionally, understanding the impact of 
@@ -28,40 +28,40 @@ Overall, these insights will help Global Electronics increase customer satisfact
 ## APPROACH
 
 ## Data Cleaning and Preparation
-*Check for missing values and handle them appropriately. Convert data types where necessary (e.g., dates, numerical values). 
+* Check for missing values and handle them appropriately. Convert data types where necessary (e.g., dates, numerical values). 
 Merge datasets where necessary for analysis (e.g., linking sales data with product and customer data).
 
 ## Load Data
-*Insert the preprocessed data into an SQL database by creating relevant tables for each data source and using SQL INSERT 
+* Insert the preprocessed data into an SQL database by creating relevant tables for each data source and using SQL INSERT 
 statements to load the data.
 
 ## Power BI Visualization
-*Connect SQL to Power BI/Tableau, import the data, and create interactive dashboards.
+* Connect SQL to Power BI/Tableau, import the data, and create interactive dashboards.
 
 ## Develop SQL Queries
-*Formulate and execute SQL queries to extract key insights from the data. These queries should address important 
+* Formulate and execute SQL queries to extract key insights from the data. These queries should address important 
 business questions and support the analysis steps below.
 
 ## ANALYSIS STEPS
 
 ## Customer Analysis and Demographic Distribution
-Analyze the distribution of customers based on gender, age (calculated from birthday), 
+* Analyze the distribution of customers based on gender, age (calculated from birthday), 
 location (city, state, country, continent).
 
 ## Purchase Patterns
-Identify purchasing patterns such as average order value, frequency of purchases, and preferred products.
+* Identify purchasing patterns such as average order value, frequency of purchases, and preferred products.
 
 ## Segmentation
-Segment customers based on demographics and purchasing behavior to identify key customer groups.
+* Segment customers based on demographics and purchasing behavior to identify key customer groups.
 
 ## Sales Analysis
-Overall Sales Performance: Analyze total sales over time, identifying trends and seasonality 
+* Overall Sales Performance: Analyze total sales over time, identifying trends and seasonality 
 Sales by Product: Evaluate which products are the top performers in terms of quantity sold and revenue generated. 
 Sales by Store: Assess the performance of different stores based on sales data. 
 Sales by Currency: Examine how different currencies impact sales figures, considering exchange rates.
 
 ## Product Analysis
-Product Popularity: Identify the most and least popular products based on sales data. 
+* Product Popularity: Identify the most and least popular products based on sales data. 
 Profitability Analysis: Calculate profit margins for products by comparing unit cost and unit price. 
 Category Analysis: Analyze sales performance across different product categories and subcategories. 
 Store Analysis Store Performance: Evaluate store performance based on sales, size (square meters), and operational data (open date). 
