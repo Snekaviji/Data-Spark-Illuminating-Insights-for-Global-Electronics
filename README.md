@@ -1,7 +1,7 @@
 # Data-Spark-Illuminating-Insights-for-Global-Electronics
 
 ## DOMAIN
-Retail Analytics in the Electronics Industry
+*Retail Analytics in the Electronics Industry
 
 ## SKILL-TAKEAWAY
 *Data Cleaning and Preprocessing
