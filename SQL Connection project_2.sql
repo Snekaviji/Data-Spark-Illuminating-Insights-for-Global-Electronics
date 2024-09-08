@@ -47,7 +47,7 @@ join customer_sales.sales_details s on pd.ProductKey = s.ProductKey
 join customer_sales.stores_details sd on s.StoreKey = sd.StoreKey
 group by s.StoreKey, sd.Country;
 
--- 7.overall selling amount
+-- 7.overall total sales
 select sum(pd.Unit_Price_USD * sd.Quantity) as total_sales_amount
 from customer_sales.product_details pd
 join customer_sales.sales_details sd on pd.ProductKey = sd.ProductKey;
@@ -57,24 +57,23 @@ select Brand, count(Brand) as brand_count
 from customer_sales.product_details 
 group by Brand;
 
--- 9. brand wise selling amount
+-- 9. brand wise total sales
 select Brand, round(sum(pd.Unit_price_USD * sd.Quantity), 2) as sales_amount
 from customer_sales.product_details pd
 join customer_sales.sales_details sd on pd.ProductKey = sd.ProductKey
 group by Brand;
 
---  10.year wise sales
-select year(sd.Order_Date), sum(pd.Unit_Price_USD * sd.Quantity) as yearly_sales
-from customer_sales.sales_details sd
-join customer_sales.product_details pd on sd.ProductKey = pd.ProductKey
-group by year(sd.Order_Date);
+-- 10.country wise overall sales
+use customer_sales;
+SELECT s.Country, SUM(pd.Unit_price_USD * sd.Quantity) AS total_sales
+FROM product_details pd
+JOIN sales_details sd ON pd.ProductKey = sd.ProductKey
+JOIN stores_details s ON sd.StoreKey = s.StoreKey
+GROUP BY s.Country;
 
--- 11.comparing current_year and previous_year sales
-select YEAR(Order_Date) as year ,
-round(sum(Unit_Price_USD*sd.Quantity),2) as sales, LAG(sum(Unit_Price_USD*sd.Quantity))
-OVER(order by YEAR(Order_Date)) AS Previous_Year_Sales 
-from customer_sales.sales_details sd 
-join customer_sales.product_details pd 
-on sd.ProductKey=pd.ProductKey 
-GROUP BY YEAR(Order_Date);    
+SELECT s.Country, COUNT(DISTINCT s.StoreKey), SUM(pd.Unit_price_USD * sd.Quantity) AS total_sales
+FROM product_details pd
+JOIN sales_details sd ON pd.ProductKey = sd.ProductKey
+JOIN stores_details s ON sd.StoreKey = s.StoreKey
+GROUP BY s.Country;    
 
